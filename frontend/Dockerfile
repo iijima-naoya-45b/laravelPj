@@ -13,11 +13,8 @@ RUN npm install
 # ソースコードをコピー
 COPY . .
 
-# ビルド
-RUN npm run build
-
 # ポートを公開
 EXPOSE 3000
 
-# Next.jsアプリケーションを起動
-CMD ["npm", "start"]
+# Next.js 開発モードで起動
+CMD ["npm", "run", "dev"]
